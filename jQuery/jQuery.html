@@ -1,0 +1,172 @@
+<!--- 
+
+addClass  
+
+Events
+click()
+keypress()
+on()
+
+---->
+
+<!--- attr() 如果只输入一个参数相当于getter--->
+	<!--- 输入两个参数相当于，改变属性值，比如改变图片地址src--->
+<!---	
+	<div>Div 1</div>
+	<div class="highlight"> Div 2</div>
+	<div id="third"> Div 3</div>
+	<div class="highlight"> Div 4</div>
+
+	$("input").val("Rusty Steele")
+
+	$('h1').addClass("correct");
+
+	$('h1').removeClass("correct");
+
+	$('li').toggleClass("correct");没有"correct"就添加，有就移除
+
+	$('li').first().toggleClass("done")
+
+	$('li').toggleClass("done")
+
+
+	$("h1").click(function(){
+    alert("h1 clicked");
+	});
+
+
+
+	$("button").click(function(){
+    alert("button clicked!");
+	});
+
+
+
+	$("button").click(function(){
+    $(this).css("background", "pink")
+	});
+
+if we want to use .css which is a jQuery method we have to make sure that
+we are running it on jQuery object, so use $(this), since $ is jQuery
+
+
+	$("button").click(function(){
+    var text = $(this).text();
+    console.log("You clicked " + text);
+});
+
+	.keypress()
+	.keyup()
+	.keydown()
+
+
+	$("input").keypress(function(){
+    console.log("you pressed a key!");
+	});当输入时会有弹出信息
+
+	$("input").keypress(function(event){
+    if(event.which === 13){
+        alert("you hit enter!");
+    }
+	});
+
+
+	keyup：用户释放某一个按键是触发
+
+	$("input").keyup(function(){
+    alert("keyup!");
+	});
+
+
+	keydown() 方法触发 keydown 事件，或规定当发生 keydown 事件时运行的函数。
+	$("input").keydown(function(){
+    alert("keydown!");
+	});
+
+
+
+	$("button").on("mouseenter", function(){
+    $(this).css("font-weight", "bold");
+	});
+
+
+	$("button").on("mouseleave", function(){
+    $(this).css("font-weight", "normal");
+	});
+
+
+
+-->
+
+	
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<style type="text/css">
+/*		.correct
+		{
+			color: green;
+		}
+
+		.wrong
+		{
+			color: red;
+			background: pink;
+		}
+
+		.done
+		{
+			color: gray;
+			text-decoration: line-through;
+		}
+*/
+
+		div
+		{
+			width: 100px;
+			height: 100px;
+			background: teal;
+			float: left;
+			margin: 20px;
+		}
+
+	</style>
+
+</head>
+<body>
+<!-- <h1>jQueryDemo!</h1> -->
+<input type="text" placeholder="your name">
+
+<button>clickme</button>
+
+<!--
+<button>Don's click me</button>
+<button>Seriously Don't click me</button>
+<button>This is your last warning!</button>   -->
+
+	<div>Please don't fade me!</div>
+	<div>Please, no</div>
+	<div>help help help</div>
+
+
+
+
+<ul>
+	<li>Skittles</li>
+	<li>Starburst</li>
+	<li>Twix</li>
+</ul>
+	
+
+	<image src="http://i2.hdslb.com/bfs/archive/597aae49c46fb8bf65d2c0798c899f3c75f1e3a8.jpg">
+
+	<script type="text/javascript" src="exercise.js"></script>
+	<script type="text/javascript" src="effect.js"></script>
+
+
+</body>
+</html>
