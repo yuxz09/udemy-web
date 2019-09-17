@@ -1,0 +1,5 @@
+在node中写模块js文件，它会首先在js文件代码的最顶部，添加如下代码 function(exports, require, module, _filename, _dirname){
+在代码的最底部，添加如下代码}
+如果想看到这个模块js文件，也就是函数中定义的参数或者方法，使用 console.log(arguments.callee + "");
+其中， arguments.callee 这个属性保存的是当前执行的函数对象
+
