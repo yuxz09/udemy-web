@@ -1,0 +1,59 @@
+const:
+      can not redeclare, reassign.
+      if object is const, its property can be changed.
+      
+let:
+      can reassgin, can not redeclare.
+      when declare var, will give it value "undefined"
+        however for let, it is not initialized until define it
+        let does hoist, but it is in a TDZ so we can not access it
+
+Object.create(existing object)
+
+/*    http://eloquentjavascript.net/07_robot.html  */
+    function buildGraph(edges) 
+    {
+      let graph = Object.create(null);
+      function addEdge(from, to) 
+      {
+        if (graph[from] == null) 
+        {
+          graph[from] = [to];
+        } 
+        else 
+        {
+          graph[from].push(to);
+        }
+      }
+      for (let [from, to] of edges.map(r => r.split("-")))   /////Calling a Function on Each Item in an Array
+      {
+        addEdge(from, to);
+        addEdge(to, from);
+      }
+      return graph;
+    }
+
+    const roadGraph = buildGraph(roads);
+/*    http://eloquentjavascript.net/07_robot.html  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
